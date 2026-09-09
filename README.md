@@ -110,7 +110,8 @@ Nothing is claimed without a check: detectors measured (mAP, pin-on-wire 100%), 
 ## Repo layout
 
 - `pipeline.py` — the one entry point (any image in, everything out)
-- `build_graph.py` — shared detect→graph used by all stage scripts
+- `src/circuitvision/` — library: `build_graph`, `graph_schema`, `pin_templates`, `wire_nets`, `anomaly_rescue`, `loop_detector`, `skeleton_x`, `constraints`, `motifs`, `correct`, `netlist`, `asc_gen`, `asc_render`
+- `examples/` — stage/dev scripts (`stage5-8_verify`, `rescue_demo`, `demo_*`, `wild_infer*`, …), run from repo root
 - `demo/inputs/` — input schematics; `demo/outputs/<name>/` — all artifacts per image
 - `control/` — Kaggle training control plane; `datasets/` — YOLO datasets + roadmap
 - `PROGRESS.md` — full execution log (decisions, bugs caught, known limits)

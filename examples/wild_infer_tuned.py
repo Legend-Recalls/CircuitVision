@@ -1,3 +1,8 @@
+import sys
+from pathlib import Path as _P
+_ROOT = _P(__file__).resolve().parent.parent
+sys.path.insert(0, str(_ROOT / 'src'))
+sys.path.insert(0, str(_ROOT))
 """Tuned inference for dense sheets (see wild_infer.py).
 
 Cross-class NMS kills stacked duplicates (resistor+capacitor on one
@@ -7,7 +12,7 @@ from pathlib import Path
 
 from ultralytics import YOLO
 
-HERE = Path(__file__).resolve().parent
+HERE = _ROOT
 WEIGHTS = HERE / "control" / "runs" / "round3_68_v1" / "best.pt"
 
 m = YOLO(str(WEIGHTS))

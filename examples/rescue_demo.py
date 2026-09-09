@@ -5,16 +5,20 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-from graph_schema import dedup_components
-from wire_nets import binarize, mask_interiors, find_dots
-from anomaly_rescue import (wire_endpoints, propose_boxes, thick_symbol_boxes,
+import sys
+from pathlib import Path as _P
+_ROOT = _P(__file__).resolve().parent.parent
+sys.path.insert(0, str(_ROOT / 'src'))
+sys.path.insert(0, str(_ROOT))
+from circuitvision.graph_schema import dedup_components
+from circuitvision.wire_nets import binarize, mask_interiors, find_dots
+from circuitvision.anomaly_rescue import (wire_endpoints, propose_boxes, thick_symbol_boxes,
                             merge_proposals, second_pass, low_conf_harvest)
 
-WEIGHTS = Path(__file__).resolve().parent / "control" / "runs" / "round3_68_v1" / "best.pt"
-SRC = Path(__file__).resolve().parent / "demo" / "inputs" / "smps.jpg"
-OUT = Path(__file__).resolve().parent / "demo" / "outputs" / "smps_rescue.jpg"
-OUT_WIRES = Path(__file__).resolve().parent / "demo" / "outputs" / "smps_wires_rescued.jpg"
+WEIGHTS = _ROOT / "control" / "runs" / "round3_68_v1" / "best.pt"
+SRC = _ROOT / "demo" / "inputs" / "smps.jpg"
+OUT = _ROOT / "demo" / "outputs" / "smps_rescue.jpg"
+OUT_WIRES = _ROOT / "demo" / "outputs" / "smps_wires_rescued.jpg"
 
 
 def main():
@@ -53,7 +57,7 @@ def main():
         print(f"  h + {cls} {conf:.2f} ({x0:.0f},{y0:.0f},{x1:.0f},{y1:.0f})")
 
     # dedup harvest vs zoom (IoU>=0.5 keep higher conf)
-    from anomaly_rescue import _iou
+    from circuitvision.anomaly_rescue import _iou
     final = list(added_zoom)
     for h in harvested:
         dup = [f for f in final if _iou(h[2], f[2]) >= 0.5]

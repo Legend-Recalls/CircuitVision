@@ -176,3 +176,8 @@
 - Caught by the verifier each time, fixed, re-verified 20/20: float coords + zero-length wires hang the netlister (integers only); title-overlap moved below extent; render font-size token bug.
 - cir1.asc is straight rails + labeled parts, viewable and simulatable as-is.
 
+## 2026-09-09 - repo sorted: src/circuitvision + examples (user call)
+
+- Lib modules (13) moved to src/circuitvision/ as a real package; dev/stage scripts to examples/; pipeline.py stays at root. Intra-project imports rewritten to package-absolute; build_graph paths re-anchored to repo root. Deleted superseded wien redraw.
+- Verified behavior-preserving: cir1 full run identical (10/20/7, asc 20/20). Run examples from repo root (relative demo/ paths).
+

@@ -3,23 +3,21 @@
 Returns everything downstream stages need; keeps stage scripts thin and
 comparable (same graph everywhere).
 """
-import sys
-sys.path.insert(0, '.')
 from pathlib import Path
 from PIL import Image
 import numpy as np
 from ultralytics import YOLO
-from graph_schema import dedup_components, Component, Pin, CircuitGraph
-from pin_templates import pins_for, score_orientation, ic_stub_pins, ICS
-from wire_nets import extract_nets, binarize, mask_interiors, find_dots
-from anomaly_rescue import (wire_endpoints, propose_boxes, thick_symbol_boxes,
+from circuitvision.graph_schema import dedup_components, Component, Pin, CircuitGraph
+from circuitvision.pin_templates import pins_for, score_orientation, ic_stub_pins, ICS
+from circuitvision.wire_nets import extract_nets, binarize, mask_interiors, find_dots
+from circuitvision.anomaly_rescue import (wire_endpoints, propose_boxes, thick_symbol_boxes,
                             merge_proposals, second_pass, low_conf_harvest,
                             _iou)
-from loop_detector import contour_loops, ic_footprints
+from circuitvision.loop_detector import contour_loops, ic_footprints
 
-HERE = Path(__file__).resolve().parent
-WEIGHTS = HERE / 'control' / 'runs' / 'round3_68_v1' / 'best.pt'
-SRC = HERE / 'demo' / 'inputs' / 'smps.jpg'
+ROOT = Path(__file__).resolve().parent.parent.parent
+WEIGHTS = ROOT / 'control' / 'runs' / 'round3_68_v1' / 'best.pt'
+SRC = ROOT / 'demo' / 'inputs' / 'smps.jpg'
 _model = None
 
 

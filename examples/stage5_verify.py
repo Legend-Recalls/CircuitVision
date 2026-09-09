@@ -1,8 +1,11 @@
 """Stage 5 verification: full pipeline -> validate -> per-check verdicts."""
 import sys
-sys.path.insert(0, '.')
-from build_graph import build_graph
-from constraints import validate, TWO_T
+from pathlib import Path as _P
+_ROOT = _P(__file__).resolve().parent.parent
+sys.path.insert(0, str(_ROOT / 'src'))
+sys.path.insert(0, str(_ROOT))
+from circuitvision.build_graph import build_graph
+from circuitvision.constraints import validate, TWO_T
 
 out = build_graph()
 comps, pins, nets = out['comps'], out['pins'], out['nets']

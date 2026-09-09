@@ -8,18 +8,21 @@ Outputs: <outdir>/<stem>_dets.jpg, <stem>_nets.jpg, <stem>_graph.png,
          <stem>.sp (+ <stem>_drive.cir, .log, .raw with --sim/--ltspice).
 """
 import sys
-sys.path.insert(0, '.')
+from pathlib import Path as _P
+_ROOT = _P(__file__).resolve().parent
+sys.path.insert(0, str(_ROOT / 'src'))
+sys.path.insert(0, str(_ROOT))
 from pathlib import Path
 import argparse
 import numpy as np
 from PIL import Image, ImageDraw
 from collections import Counter
 
-from build_graph import build_graph
-from constraints import validate
-from motifs import all_motifs, rank_repairs, electrical_nets
-from correct import apply_corrections
-from netlist import build_netlist
+from circuitvision.build_graph import build_graph
+from circuitvision.constraints import validate
+from circuitvision.motifs import all_motifs, rank_repairs, electrical_nets
+from circuitvision.correct import apply_corrections
+from circuitvision.netlist import build_netlist
 
 
 def main():
@@ -55,7 +58,7 @@ def main():
     imp.save(outdir / f'{tag}_pins.jpg')
     print(f'{len(out["pin_xy"])} pins -> {tag}_pins.jpg')
 
-    from wire_nets import mask_interiors as _mask, binarize as _bin
+    from circuitvision.wire_nets import mask_interiors as _mask, binarize as _bin
     masked_all = _mask(_bin(gray), [b for _, b in comps])
     imw = Image.fromarray(((1 - (masked_all > 0)) * 255).astype(np.uint8)
                           ).convert('RGB')
@@ -158,7 +161,7 @@ def main():
           f'bad={len(vr["bad_lines"])}, flt={vr["flt_pins"]}')
 
     print('== asc reconstruction ==')
-    from asc_gen import gen_asc, verify_asc, placements
+    from circuitvision.asc_gen import gen_asc, verify_asc, placements
     exp = gen_asc(c2, p2, out['pin_xy'], n2,
                   rep2['ground_collapse']['merge_map'],
                   str(outdir / f'{tag}.asc'), f'{tag} via CircuitVision',
@@ -189,7 +192,7 @@ def main():
         dpv.text((2 * X, 2 * Y - 24), f'{inst}({sym})', fill='blue')
     prv.save(outdir / f'{tag}_asc_preview.png')
     print(f'saved {tag}.asc + {tag}_asc_preview.png')
-    from asc_render import render_asc
+    from circuitvision.asc_render import render_asc
     render_asc(str(outdir / f'{tag}.asc'),
                str(outdir / f'{tag}_ltspice.png'))
 

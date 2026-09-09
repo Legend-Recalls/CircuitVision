@@ -22,7 +22,7 @@ Inputs are plain tuples so the validator stays decoupled from graph classes:
 
 Report: {check: {'verdict': PASS|FLAG|MAP, ...}} + summary counts.
 """
-from pin_templates import AXIAL2, BJT3, FET3, GATES, OPAMP, ICS, XFORMER, \
+from circuitvision.pin_templates import AXIAL2, BJT3, FET3, GATES, OPAMP, ICS, XFORMER, \
     SOURCES2, TGATE4, AMP1, GROUND1, RAIL1, PORT1, NONE
 
 TWO_T = set(AXIAL2) | set(SOURCES2) | set(AMP1)  # all 2-pin contracts
@@ -214,7 +214,7 @@ def check_crossing_no_dot(wire_ctx, pin_nets, dot_r=14, box_margin=10):
     (unmasked binary map for circle recovery).
     """
     import numpy as np
-    from skeleton_x import x_crossings, all_circles, explain_x
+    from circuitvision.skeleton_x import x_crossings, all_circles, explain_x
     masked = wire_ctx['masked']
     labels = wire_ctx['labels']
     dots = wire_ctx['dots']

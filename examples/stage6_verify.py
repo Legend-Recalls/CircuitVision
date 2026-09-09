@@ -1,9 +1,12 @@
 """Stage 6 verification: motifs + repair ranking on the SMPS graph."""
 import sys
-sys.path.insert(0, '.')
-from build_graph import build_graph
-from constraints import validate
-from motifs import all_motifs, rank_repairs, electrical_nets
+from pathlib import Path as _P
+_ROOT = _P(__file__).resolve().parent.parent
+sys.path.insert(0, str(_ROOT / 'src'))
+sys.path.insert(0, str(_ROOT))
+from circuitvision.build_graph import build_graph
+from circuitvision.constraints import validate
+from circuitvision.motifs import all_motifs, rank_repairs, electrical_nets
 
 out = build_graph(verbose=False)
 comps, pins, nets = out['comps'], out['pins'], out['nets']

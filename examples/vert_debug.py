@@ -5,13 +5,17 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-from graph_schema import dedup_components
-from pin_templates import pins_for
+import sys
+from pathlib import Path as _P
+_ROOT = _P(__file__).resolve().parent.parent
+sys.path.insert(0, str(_ROOT / 'src'))
+sys.path.insert(0, str(_ROOT))
+from circuitvision.graph_schema import dedup_components
+from circuitvision.pin_templates import pins_for
 
-WEIGHTS = Path(__file__).resolve().parent / "control" / "runs" / "round3_68_v1" / "best.pt"
-SRC = Path(__file__).resolve().parent / "demo" / "inputs" / "smps.jpg"
-OUTDIR = Path(__file__).resolve().parent / "demo" / "outputs" / "vert_debug"
+WEIGHTS = _ROOT / "control" / "runs" / "round3_68_v1" / "best.pt"
+SRC = _ROOT / "demo" / "inputs" / "smps.jpg"
+OUTDIR = _ROOT / "demo" / "outputs" / "vert_debug"
 CONF = 0.35
 
 

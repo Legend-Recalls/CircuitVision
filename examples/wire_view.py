@@ -5,17 +5,21 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-from graph_schema import dedup_components
-from wire_nets import binarize, mask_interiors, find_dots
+import sys
+from pathlib import Path as _P
+_ROOT = _P(__file__).resolve().parent.parent
+sys.path.insert(0, str(_ROOT / 'src'))
+sys.path.insert(0, str(_ROOT))
+from circuitvision.graph_schema import dedup_components
+from circuitvision.wire_nets import binarize, mask_interiors, find_dots
 
-SRC = Path(__file__).resolve().parent / "demo" / "inputs" / "smps.jpg"
-OUT = Path(__file__).resolve().parent / "demo" / "outputs" / "smps_wires.jpg"
+SRC = _ROOT / "demo" / "inputs" / "smps.jpg"
+OUT = _ROOT / "demo" / "outputs" / "smps_wires.jpg"
 
 
 def main():
     from ultralytics import YOLO
-    w = Path(__file__).resolve().parent / "control" / "runs" / "round3_68_v1" / "best.pt"
+    w = _ROOT / "control" / "runs" / "round3_68_v1" / "best.pt"
     model = YOLO(str(w))
     res = model.predict(source=str(SRC), conf=0.35, device="cpu", verbose=False)[0]
     dets = [(res.names[int(b.cls)], float(b.conf),

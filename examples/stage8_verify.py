@@ -1,12 +1,15 @@
 """Stage 8 verification: correct -> netlist -> report."""
 import sys
-sys.path.insert(0, '.')
+from pathlib import Path as _P
+_ROOT = _P(__file__).resolve().parent.parent
+sys.path.insert(0, str(_ROOT / 'src'))
+sys.path.insert(0, str(_ROOT))
 from pathlib import Path
-from build_graph import build_graph
-from constraints import validate
-from motifs import rank_repairs, electrical_nets
-from correct import apply_corrections
-from netlist import build_netlist
+from circuitvision.build_graph import build_graph
+from circuitvision.constraints import validate
+from circuitvision.motifs import rank_repairs, electrical_nets
+from circuitvision.correct import apply_corrections
+from circuitvision.netlist import build_netlist
 
 out = build_graph(verbose=False)
 comps, pins, nets = out['comps'], out['pins'], out['nets']

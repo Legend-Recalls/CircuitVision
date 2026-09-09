@@ -11,13 +11,17 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-from graph_schema import Component, Pin, CircuitGraph, dedup_components
-from pin_templates import pins_for, score_orientation, ic_stub_pins, ICS
+import sys
+from pathlib import Path as _P
+_ROOT = _P(__file__).resolve().parent.parent
+sys.path.insert(0, str(_ROOT / 'src'))
+sys.path.insert(0, str(_ROOT))
+from circuitvision.graph_schema import Component, Pin, CircuitGraph, dedup_components
+from circuitvision.pin_templates import pins_for, score_orientation, ic_stub_pins, ICS
 
-WEIGHTS = Path(__file__).resolve().parent / "control" / "runs" / "round3_68_v1" / "best.pt"
-SRC = Path(__file__).resolve().parent / "demo" / "inputs" / "smps.jpg"
-OUT = Path(__file__).resolve().parent / "demo" / "outputs" / "smps_pins_v2.jpg"
+WEIGHTS = _ROOT / "control" / "runs" / "round3_68_v1" / "best.pt"
+SRC = _ROOT / "demo" / "inputs" / "smps.jpg"
+OUT = _ROOT / "demo" / "outputs" / "smps_pins_v2.jpg"
 CONF = 0.35
 
 

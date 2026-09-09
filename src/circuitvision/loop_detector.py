@@ -20,7 +20,7 @@ import numpy as np
 
 def contour_loops(masked, boxes, dots, img_wh, area_lo=1500,
                   area_hi=200000, dot_r=20, box_iou=0.3, pad=40):
-    from anomaly_rescue import _iou, _near_dot, _near_box
+    from circuitvision.anomaly_rescue import _iou, _near_dot, _near_box
     W, H = img_wh
     cnts, _ = cv2.findContours(masked, cv2.RETR_EXTERNAL,
                                cv2.CHAIN_APPROX_SIMPLE)
@@ -65,7 +65,7 @@ def ic_footprints(masked, boxes, img_wh, min_n=5, span_min=150, pad=50):
     carry class hint 'integrated_circuit' for Stage 7 structural recovery;
     crops are still attempted at 0.05 + TTA.
     """
-    from anomaly_rescue import _iou
+    from circuitvision.anomaly_rescue import _iou
     W, H = img_wh
     blur = cv2.medianBlur((masked * 255).astype(np.uint8), 3)
     circles = cv2.HoughCircles(blur, cv2.HOUGH_GRADIENT, 1, 20,

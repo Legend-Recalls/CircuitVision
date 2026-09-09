@@ -1,12 +1,15 @@
 """Render current graph: net overlay, motif overlay, subgraph diagram."""
 import sys
-sys.path.insert(0, '.')
+from pathlib import Path as _P
+_ROOT = _P(__file__).resolve().parent.parent
+sys.path.insert(0, str(_ROOT / 'src'))
+sys.path.insert(0, str(_ROOT))
 from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw
-from build_graph import build_graph
-from constraints import validate
-from motifs import all_motifs
+from circuitvision.build_graph import build_graph
+from circuitvision.constraints import validate
+from circuitvision.motifs import all_motifs
 
 out = build_graph(verbose=False)
 comps, pins, nets = out['comps'], out['pins'], out['nets']

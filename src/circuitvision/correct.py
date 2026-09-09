@@ -65,7 +65,7 @@ def p1_prune_noise(comps, pins, rank, rescued_from=113):
 def p2_ground_homing(comps, pins, pin_xy, nets, gnd_merge,
                      troubled, radius=120):
     """Troubled gnd/vss pins join the nearest GND-merged net."""
-    from constraints import GROUND1
+    from circuitvision.constraints import GROUND1
     # anchors: pins already on GND-merged nets
     anchors = [(pin_xy[qi], n) for qi, (_, _, n) in enumerate(pins)
                if n is not None and n in gnd_merge]
@@ -122,7 +122,7 @@ def p4_synthesize_ic(comps, pins, pin_xy, wire_ctx, footprint,
                      net_of, net_index, keep):
     """IC1: footprint bbox + terminal circles -> comp + pins on fragments."""
     import cv2
-    from wire_nets import astar_to_wire
+    from circuitvision.wire_nets import astar_to_wire
     x0, y0, x1, y1, n = footprint
     labels = wire_ctx['labels']
     wire = wire_ctx['wire']
@@ -178,7 +178,7 @@ def p4_synthesize_ic(comps, pins, pin_xy, wire_ctx, footprint,
 def apply_corrections(comps, pins, pin_xy, nets, wire_ctx, gnd_merge,
                       rank, footprints):
     """Full Stage-7 run. Returns dict with corrected data + log."""
-    from constraints import GROUND1
+    from circuitvision.constraints import GROUND1
     log = []
     gone_c, gone_p, l1 = p1_prune_noise(comps, pins, rank)
     log += l1

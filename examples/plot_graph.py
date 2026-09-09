@@ -1,10 +1,13 @@
 """Plot the graph itself: component <-> net bipartite node-link diagrams."""
 import sys
-sys.path.insert(0, '.')
+from pathlib import Path as _P
+_ROOT = _P(__file__).resolve().parent.parent
+sys.path.insert(0, str(_ROOT / 'src'))
+sys.path.insert(0, str(_ROOT))
 from pathlib import Path
 import networkx as nx
-from build_graph import build_graph
-from constraints import validate
+from circuitvision.build_graph import build_graph
+from circuitvision.constraints import validate
 
 out = build_graph(verbose=False)
 comps, pins, nets = out['comps'], out['pins'], out['nets']

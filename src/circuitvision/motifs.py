@@ -290,7 +290,7 @@ def rank_repairs(comps, pins, pin_xy, enets, troubled, radius=120,
     copper 15px away, nearest pin 103px). Returns
     {pin_idx: [(score, enet, dist), ...]} top-3.
     """
-    from constraints import GROUND1
+    from circuitvision.constraints import GROUND1
     pin_nets = _pin_nets(enets)
     taps = set()
     for d in find_dividers(comps, pins, enets):
