@@ -1,0 +1,11 @@
+{
+  "id": "muzaafnameerfirdausi/cv-hist-clahe92",
+  "title": "cv-hist-clahe92",
+  "code_file": "hist.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": ["muzaafnameerfirdausi/circuitvision-clahe"]
+}

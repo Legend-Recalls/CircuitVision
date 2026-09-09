@@ -1,0 +1,12 @@
+{
+  "id": "muzaafnameerfirdausi/cv-finetune69",
+  "title": "cv-finetune69",
+  "code_file": "ft_driver.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "enable_internet": true,
+  "dataset_sources": ["muzaafnameerfirdausi/circuitvision-focused69", "muzaafnameerfirdausi/yolo-checkpoints"]
+}

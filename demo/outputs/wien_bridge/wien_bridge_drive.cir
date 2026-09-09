@@ -1,0 +1,32 @@
+* CircuitVision wien_bridge (topology + assigned values)
+* 0=GND(electrical, raw GND nets collapsed)
+R1 N5 N11 1k  ; resistor
+R3 N20 0 1k  ; resistor
+R4 N5 N10 1k  ; resistor
+R5 N10 0 1k  ; resistor
+C7 N11 N2 1u  ; capacitor
+Q10 N11 N10 N20 QMODN  ; npn
+R11 N1 N18 1k  ; resistor
+C12 N12 N10 1u  ; capacitor
+C13 N1 N2 1u  ; capacitor
+Q14 N12 N14 N18 QMODN  ; npn
+R15 N5 N12 1k  ; resistor
+R16 N21 N14 1k  ; resistor
+R17 N1 N14 1k  ; resistor
+R18 N5 N14 1k  ; resistor
+C19 N14 N21 1u  ; capacitor
+C20 N14 N14 1u  ; capacitor
+L21 N18 N21 10u Rser=10m  ; inductor
+R22 N5 N12 1k  ; resistor
+VVCC 5 0 DC 12  ; TOY supply (placeholder)
+.ic V(11)=2m
+.ic V(12)=2m
+.tran 0 8m 0 uic
+* --- models ---
+.model DMOD D
+.model QMODN NPN
+.model QMODP PNP
+.model MMODN NMOS
+.model MMODP PMOS
+.model SMOD SW()
+.end

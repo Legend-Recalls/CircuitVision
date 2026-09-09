@@ -1,0 +1,15 @@
+{
+  "id": "muzaafnameerfirdausi/cv-round3-68",
+  "title": "cv-round3-68",
+  "code_file": "driver.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "enable_internet": true,
+  "dataset_sources": [
+    "muzaafnameerfirdausi/circuitvision-clahe",
+    "muzaafnameerfirdausi/yolo-checkpoints"
+  ]
+}

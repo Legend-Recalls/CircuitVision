@@ -1,0 +1,166 @@
+======================================================================
+PHASE A DATASET AUDIT: C:\Users\Administrator\Downloads\Datasets\ALL_COMPONENTS.merged.yolov8
+======================================================================
+classes: 106, total instances: 338,803
+
+--- 2. PER-SOURCE IMAGE COUNTS PER SPLIT ---
+source                                      train    valid     test    total
+cghd.yolov8                                  2615      326      328     3269
+ci2n.device_identification.y                 1771      214      209     2194
+digitize_hcd.component_symbo                 1021      127      129     1277
+schematic.merged.yolov8                      2068      588      289     2945
+schematic_images.hf.yolov8                  80037     9960    10003   100000
+v3qwe.v2i.yolov8                             6483      427        0     6910
+
+--- 1. CLASS HISTOGRAM (sorted ascending by total) ---
+  id name                                      train    valid     test    total
+  22 dflipflop                                     0        0        0        0
+  83 tgate                                         0        0        0        0
+  34 generator                                     9        1        0       10
+  13 connector                                    10        0        2       12
+  26 diode.thyrector                              10        2        4       16
+  33 galvanometer                                 15        1        0       16
+  61 operational_amplifier.schmitt_trigger        16        0        0       16
+  31 frequency_meter                              15        5        0       20
+   8 buzzer                                       14        6        1       21
+  69 pnp.cross                                    19        2        0       21
+  59 ohmmeter                                     15        7        1       23
+  84 thermistor                                   21        4        0       25
+  58 npn.cross                                    18        3        6       27
+  21 dependent_voltage_source                     20        5        6       31
+  47 mechanical                                   27        2        3       32
+  73 probe.voltage                                27        4        1       32
+  28 display.7_segment                            23        8        4       35
+  29 electric_bell                                25       11        1       37
+ 103 wattimeter                                   25        9        5       39
+  23 diac                                         24        5       11       40
+   2 amplifier.differential                       39        1        1       41
+   1 amplifier                                    22        1       19       42
+  12 clock                                        28       13       11       52
+  46 magnetron                                    38       13        5       56
+  36 heating_element                              30       12       18       60
+ 104 xnor                                         56        8        5       69
+  72 probe.current                                59        6        7       72
+  87 transistor                                   57       18        1       76
+   4 amplifier.single_input_single_end            71        2        5       78
+ 101 voltimeter                                   67       13        2       82
+   0 amperimeter                                  74        9        2       85
+  74 relay                                        66       13       10       89
+  48 microphone                                   79       13        0       92
+  90 triac                                        74        9       15       98
+   6 antenna                                      95       15        9      119
+  62 optical                                      95       18       14      127
+  16 crystal                                     112       11        9      132
+  20 dependent_current_source                     91       30       20      141
+  44 light                                       112       26       13      151
+  63 optocoupler                                 123       23       16      162
+  50 motor                                       145       18        8      171
+  71 probe                                       143        8       20      171
+  38 inductor.ferrite                            140       19       14      173
+  89 transistor.photo                            141       24       12      177
+  78 socket                                      153       24        7      184
+  93 varistor                                    162        9       13      184
+ 100 voltage.lines                               145       23       19      187
+  54 nmos.cross                                  158       19       23      200
+  40 integrated_circuit.ne555                    214       30       18      262
+  10 capacitor.adjustable                        206       37       21      264
+  77 resistor.photo                              213       46       25      284
+  43 lamp                                        252       23       26      301
+  67 pmos.cross                                  235       40       29      304
+  66 pmos.bulk                                   245       24       43      312
+  41 integrated_circuit.voltage_regulator        286       40       32      358
+ 105 xor                                         272       49       42      363
+  45 magnetic                                    284       40       40      364
+  32 fuse                                        309       43       36      388
+  55 nor                                         267      101       28      396
+  18 current_source.ac                           331       41       42      414
+  85 thyristor                                   349       28       38      415
+  79 speaker                                     362       29       39      430
+  53 nmos.bulk                                   343       50       39      432
+  92 v                                           311       86       41      438
+   7 block                                       317       93       39      449
+  51 nand                                        333      115       31      479
+  30 explanatory                                 471       78       59      608
+   3 amplifier.single_end                        526       52       72      650
+  99 voltage.dc.one_port                         525       56       93      674
+  64 or                                          520      100       73      693
+  86 transformer                                 547       81       68      696
+  19 current_source.dc                           637       80       75      792
+  56 not                                         663      138       84      885
+  15 crossover.curved                            862       86       89     1037
+   5 and                                         916      151      100     1167
+  76 resistor.adjustable                         966      120       89     1175
+  27 diode.zener                                 968      127      116     1211
+  97 voltage.battery                            1037       99       90     1226
+ 102 vss                                        1074      122      113     1309
+  25 diode.light_emitting                       1053      228      110     1391
+  96 voltage.ac                                 1149      157       98     1404
+  39 integrated_circuit                         1201      156      135     1492
+  95 voltage                                    1328      156       80     1564
+  94 vdd                                        1324      150      124     1598
+  49 mosfet                                     1416      135      111     1662
+  60 operational_amplifier                      1343      170      157     1670
+  91 unknown                                     864      841       48     1753
+  68 pnp                                        1406      158      237     1801
+  17 current_source                             1543      173      123     1839
+  11 capacitor.polarized                        1921      288      264     2473
+  65 pmos                                       2280      274      248     2802
+  98 voltage.dc                                 2519      335      192     3046
+  57 npn                                        2469      280      392     3141
+  80 switch                                     2826      364      252     3442
+  52 nmos                                       2879      382      295     3556
+  88 transistor.bjt                             4007      404      362     4773
+  37 inductor                                   4726      595      495     5816
+  24 diode                                      5619      688      584     6891
+  70 port                                       6363      792      774     7929
+  81 terminal                                   8868     1076     1143    11087
+  14 crossover                                  9580      964      875    11419
+   9 capacitor                                 11993     1432     1095    14520
+  35 gnd                                       12972     1520     1382    15874
+  75 resistor                                  29267     3373     2820    35460
+  42 junction                                  63395     7555     7185    78135
+  82 text                                      72605     9082     8078    89765
+
+ZERO-instance classes (2): ['dflipflop', 'tgate']
+UNDER-30 (drop/fold candidates) (11): ['generator', 'connector', 'diode.thyrector', 'galvanometer', 'operational_amplifier.schmitt_trigger', 'frequency_meter', 'buzzer', 'pnp.cross', 'ohmmeter', 'thermistor', 'npn.cross']
+UNDER-100 (augment-needed) (21): ['dependent_voltage_source', 'mechanical', 'probe.voltage', 'display.7_segment', 'electric_bell', 'wattimeter', 'diac', 'amplifier.differential', 'amplifier', 'clock', 'magnetron', 'heating_element', 'xnor', 'probe.current', 'transistor', 'amplifier.single_input_single_end', 'voltimeter', 'amperimeter', 'relay', 'microphone', 'triac']
+
+--- 3. CGHD CIRCUIT-LEVEL LEAK CHECK ---
+CGHD circuits seen: 377
+CGHD circuits spanning >1 split (LEAK): 320
+  drafter0_c1: splits=['test', 'train', 'valid']  e.g. [('train', 'cghd.yolov8_train_01b7a8c54222_drafter_0_c1_d85_p1.png'), ('train', 'cghd.yolov8_train_05a44551c43e_drafter_0_c1_d19_p1.png')]
+  drafter0_c2: splits=['test', 'train', 'valid']  e.g. [('train', 'cghd.yolov8_train_04a237216dfd_drafter_0_c2_d231_p1.png'), ('train', 'cghd.yolov8_train_0a6ef78d1565_drafter_0_c2_d178_p1.png')]
+  drafter0_c3: splits=['test', 'train', 'valid']  e.g. [('train', 'cghd.yolov8_train_0919aac73a49_drafter_0_c3_d59_p1.png'), ('train', 'cghd.yolov8_train_180f3b5fdb3b_drafter_0_c3_d3_p1.png')]
+  drafter0_c4: splits=['test', 'train']  e.g. [('train', 'cghd.yolov8_train_34ab268f9a46_drafter_0_c4_d35_p1.png'), ('train', 'cghd.yolov8_train_68ad1ae7399b_drafter_0_c4_d51_p1.png')]
+  drafter0_c5: splits=['test', 'train', 'valid']  e.g. [('train', 'cghd.yolov8_train_0a10cb3603ea_drafter_0_c5_d169_p1.png'), ('train', 'cghd.yolov8_train_3615a9ac29be_drafter_0_c5_d43_p1.png')]
+  drafter10_c109: splits=['test', 'train']  e.g. [('train', 'cghd.yolov8_train_01e5d5e5ee2b_drafter_10_c109_d2_p1.jpg'), ('train', 'cghd.yolov8_train_3073418eb47e_drafter_10_c109_d1_p2.jpg')]
+  drafter10_c110: splits=['test', 'train']  e.g. [('train', 'cghd.yolov8_train_1930170bb96e_drafter_10_c110_d1_p3.jpg'), ('train', 'cghd.yolov8_train_6890e6f64ba4_drafter_10_c110_d2_p2.jpg')]
+  drafter10_c111: splits=['train', 'valid']  e.g. [('train', 'cghd.yolov8_train_34fb10b2f660_drafter_10_c111_d1_p2.jpg'), ('train', 'cghd.yolov8_train_56ef60ddde66_drafter_10_c111_d2_p2.jpg')]
+  drafter10_c112: splits=['test', 'train']  e.g. [('train', 'cghd.yolov8_train_9e23d3b60537_drafter_10_c112_d2_p1.jpg'), ('train', 'cghd.yolov8_train_c5eb917ee118_drafter_10_c112_d1_p3.jpg')]
+  drafter10_c113: splits=['train', 'valid']  e.g. [('train', 'cghd.yolov8_train_08ca1c69b2e1_drafter_10_c113_d2_p4.jpg'), ('train', 'cghd.yolov8_train_37b6024a77a5_drafter_10_c113_d1_p3.jpg')]
+  drafter10_c114: splits=['test', 'train', 'valid']  e.g. [('train', 'cghd.yolov8_train_1859deed3ce7_drafter_10_c114_d1_p2.jpg'), ('train', 'cghd.yolov8_train_882a8c4fa265_drafter_10_c114_d2_p1.jpg')]
+  drafter10_c115: splits=['train', 'valid']  e.g. [('train', 'cghd.yolov8_train_0aaca388f0a8_drafter_10_c115_d1_p3.jpg'), ('train', 'cghd.yolov8_train_5e02ddb8c9a2_drafter_10_c115_d2_p1.jpg')]
+  drafter10_c116: splits=['test', 'train']  e.g. [('train', 'cghd.yolov8_train_3028c1ea809d_drafter_10_c116_d2_p4.jpg'), ('train', 'cghd.yolov8_train_41dc35ccf504_drafter_10_c116_d1_p1.jpg')]
+  drafter10_c117: splits=['test', 'train']  e.g. [('train', 'cghd.yolov8_train_23c977e9a7a0_drafter_10_c117_d1_p2.jpg'), ('train', 'cghd.yolov8_train_52c62db1583a_drafter_10_c117_d2_p4.jpg')]
+  drafter10_c119: splits=['test', 'train', 'valid']  e.g. [('train', 'cghd.yolov8_train_02d89f52f0b3_drafter_10_c119_d1_p3.jpg'), ('train', 'cghd.yolov8_train_33a0e2173461_drafter_10_c119_d2_p2.jpg')]
+  drafter11_c121: splits=['train', 'valid']  e.g. [('train', 'cghd.yolov8_train_1107ffefae79_drafter_11_c121_d1_p3.jpg'), ('train', 'cghd.yolov8_train_47509518e427_drafter_11_c121_d2_p4.jpg')]
+  drafter11_c122: splits=['test', 'train', 'valid']  e.g. [('train', 'cghd.yolov8_train_19ad83053c71_drafter_11_c122_d1_p1.jpg'), ('train', 'cghd.yolov8_train_216902d16b0a_drafter_11_c122_d2_p3.jpg')]
+  drafter11_c124: splits=['test', 'train', 'valid']  e.g. [('train', 'cghd.yolov8_train_88ac05bd04b4_drafter_11_c124_d1_p1.jpg'), ('train', 'cghd.yolov8_train_a09adf5a1d1b_drafter_11_c124_d1_p4.jpg')]
+  drafter11_c125: splits=['train', 'valid']  e.g. [('train', 'cghd.yolov8_train_04f4f3b48c4e_drafter_11_c125_d2_p4.jpg'), ('train', 'cghd.yolov8_train_2187a4af951b_drafter_11_c125_d2_p3.jpg')]
+  drafter11_c126: splits=['test', 'train']  e.g. [('train', 'cghd.yolov8_train_177bab976999_drafter_11_c126_d2_p3.jpg'), ('train', 'cghd.yolov8_train_34701b276f12_drafter_11_c126_d1_p3.jpg')]
+  drafter11_c127: splits=['train', 'valid']  e.g. [('train', 'cghd.yolov8_train_0c1b5bc23345_drafter_11_c127_d2_p3.jpg'), ('train', 'cghd.yolov8_train_6f23119f842b_drafter_11_c127_d1_p1.jpg')]
+  drafter11_c128: splits=['test', 'train', 'valid']  e.g. [('train', 'cghd.yolov8_train_5421da137dbe_drafter_11_c128_d1_p3.jpg'), ('train', 'cghd.yolov8_train_a3c3ac5966f1_drafter_11_c128_d1_p4.jpg')]
+  drafter11_c129: splits=['train', 'valid']  e.g. [('train', 'cghd.yolov8_train_259bb5f254ca_drafter_11_c129_d1_p1.jpg'), ('train', 'cghd.yolov8_train_309e192ec5d8_drafter_11_c129_d1_p4.jpg')]
+  drafter11_c131: splits=['test', 'train']  e.g. [('train', 'cghd.yolov8_train_00f33f02bd2b_drafter_11_c131_d2_p1.jpg'), ('train', 'cghd.yolov8_train_5e498184bbaf_drafter_11_c131_d1_p1.jpg')]
+  drafter11_c132: splits=['test', 'train']  e.g. [('train', 'cghd.yolov8_train_7d4eaa8bdbd2_drafter_11_c132_d2_p3.jpg'), ('train', 'cghd.yolov8_train_82ab00e0902b_drafter_11_c132_d1_p1.jpg')]
+  ... and 295 more
+
+--- 4. ANNOTATION SANITY ---
+  malformed_line: 1085569
+      e.g. schematic_images.hf.yolov8_train_00012fc7bb2e_schematic_images_hf_circuit83756.jpg:0 -> '56 0.5874524714828897 0.659016393442623 0.11406844106463879 0.09836065573770492 R0'
+      e.g. schematic_images.hf.yolov8_train_00012fc7bb2e_schematic_images_hf_circuit83756.jpg:1 -> '22 0.8165399239543727 0.13442622950819672 0.11406844106463879 0.16393442622950818 R0'
+      e.g. schematic_images.hf.yolov8_train_00012fc7bb2e_schematic_images_hf_circuit83756.jpg:2 -> '64 0.6397338403041825 0.8229508196721311 0.14258555133079848 0.13114754098360656 R0'
+      e.g. schematic_images.hf.yolov8_train_00012fc7bb2e_schematic_images_hf_circuit83756.jpg:3 -> '105 0.2214828897338403 0.659016393442623 0.14258555133079848 0.13114754098360656 R0'
+      e.g. schematic_images.hf.yolov8_train_00012fc7bb2e_schematic_images_hf_circuit83756.jpg:4 -> '64 0.4115969581749049 0.6262295081967213 0.14258555133079848 0.13114754098360656 R0'
+  zero_area_box: 1
+      e.g. schematic.merged.yolov8_train_9d82dadfc882_captura_de_pantalla_2024_03_10_105939_png.rf.2e7.jpg:5

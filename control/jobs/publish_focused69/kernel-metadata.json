@@ -1,0 +1,11 @@
+{
+  "id": "muzaafnameerfirdausi/cv-publish-focused69",
+  "title": "cv-publish-focused69",
+  "code_file": "publish.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "dataset_sources": ["muzaafnameerfirdausi/circuitvision-clahe"]
+}

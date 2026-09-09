@@ -1,0 +1,4 @@
+kaggle>=2.2
+nbformat>=5.11
+torch>=2.0
+ultralytics>=8.0

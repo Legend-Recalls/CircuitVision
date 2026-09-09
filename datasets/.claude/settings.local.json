@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(shuf -n 8)",
+      "Bash(python -c \"import imagehash, PIL, numpy; print\\('libs ok'\\)\")",
+      "Bash(python -c ' *)",
+      "Bash(python fix_blocker1_orientation.py)",
+      "Bash(python fix_blocker1_orientation.py --apply)",
+      "Bash(python fix_blocker2_cghd_resplit.py)",
+      "Bash(python apply_taxonomy_remap.py)",
+      "Bash(python apply_taxonomy_remap.py --apply)",
+      "Bash(where kaggle *)",
+      "Bash(python -c \"import kaggle\")",
+      "Bash(python -m pip install -q kaggle)",
+      "Bash(python -m kaggle --version)",
+      "Bash(python *)",
+      "Read(//c/tmp/**)",
+      "Bash(mkdir -p kaggle_nb_out)"
+    ]
+  }
+}

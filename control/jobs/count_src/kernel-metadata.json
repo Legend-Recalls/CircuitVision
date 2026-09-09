@@ -1,0 +1,11 @@
+{
+  "id": "muzaafnameerfirdausi/cv-count-src",
+  "title": "cv-count-src",
+  "code_file": "count.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": ["muzaafnameerfirdausi/circuitvision-clahe"]
+}

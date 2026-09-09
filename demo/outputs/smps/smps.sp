@@ -1,0 +1,137 @@
+* CircuitVision smps (topology + assigned values)
+* 0=GND(electrical, raw GND nets collapsed)
+D0 N103 N175 DMOD  ; diode
+R1 0 N384 1k  ; resistor
+R2 0 0 1k  ; resistor
+D3 0 N94 DMOD  ; diode
+R4 0 0 1k  ; resistor
+R5 N325 N348 1k  ; resistor
+R6 0 0 1k  ; resistor
+D7 N273 0 DMOD  ; diode
+R8 N113 0 1k  ; resistor
+R9 N348 N468 1k  ; resistor
+C10 0 0 1u  ; capacitor
+R11 N113 0 1k  ; resistor
+C12 0 0 1u  ; capacitor
+Q13 N94 N211 0 QMODN  ; npn
+R14 N422 N470 1k  ; resistor
+R15 0 0 1k  ; resistor
+R16 N107 N147 1k  ; resistor
+C17 N91 N89 1u  ; capacitor
+D18 N94 0 DMOD  ; diode
+R19 N89 N94 1k  ; resistor
+R20 N147 0 1k  ; resistor
+R21 N495 0 1k  ; resistor
+R22 N348 0 1k  ; resistor
+R23 N348 N414 1k  ; resistor
+C24 N550 N348 1u  ; capacitor
+R25 N384 0 1k  ; resistor
+C26 0 N528 1u  ; capacitor
+R27 N148 N75 1k  ; resistor
+R28 N208 0 1k  ; resistor
+R29 N147 0 1k  ; resistor
+R30 N538 N550 1k  ; resistor
+D31 N175 0 DMOD  ; diode
+D32 N273 0 DMOD  ; diode
+C33 N348 0 1u  ; capacitor
+C35 N469 0 1u  ; capacitor
+Q36 N469 N470 0 QMODN  ; npn
+R37 N423 N469 1k  ; resistor
+C38 0 0 1u  ; capacitor
+R39 N92 N89 1k  ; resistor
+C40 N414 N415 1u  ; capacitor
+R41 N94 N208 1k  ; resistor
+D42 0 0 DMOD  ; diode
+D43 N483 N469 DMOD  ; diode
+Q44 0 N93 N94 QMODN  ; npn
+D45 N113 N75 DMOD  ; diode
+R46 0 N89 1k  ; resistor
+C47 0 0 1u  ; capacitor
+C48 N73 N74 1u  ; capacitor
+C49 N113 N148 1u  ; capacitor
+D50 N175 N206 DMOD  ; diode
+R51 N348 N113 1k  ; resistor
+R52 N89 N93 1k  ; resistor
+C54 0 N69 1u  ; capacitor
+C56 0 N384 1u  ; capacitor
+C57 N384 0 1u  ; capacitor
+R58 N414 N415 1k  ; resistor
+R61 0 N89 1k  ; resistor
+R62 N470 0 1k  ; resistor
+C63 0 0 1u  ; capacitor
+R65 N428 N348 1k  ; resistor
+D66 N73 N75 DMOD  ; diode
+C67 0 N208 1u  ; capacitor
+R68 0 0 1k  ; resistor
+R69 N74 N75 1k  ; resistor
+R70 N94 N208 1k  ; resistor
+R72 N468 0 1k  ; resistor
+D74 N488 N489 DMOD  ; diode
+R75 N210 N208 1k  ; resistor
+D78 N210 N210 DMOD  ; diode
+L79 0 N95 10u Rser=10m  ; inductor
+R81 N208 N211 1k  ; resistor
+R84 N69 N127 1k  ; resistor
+D85 N91 N92 DMOD  ; diode
+S86 0 N351 0 0 SMOD  ; switch
+Q88 N175 0 N206 QMODP  ; pnp
+L90 N91 N94 10u Rser=10m  ; inductor
+L92 0 N95 10u Rser=10m  ; inductor
+R93 N103 N149 1k  ; resistor
+C94 0 0 1u  ; capacitor
+L97 N149 N103 10u Rser=10m  ; inductor
+C98 N175 N250 1u  ; capacitor
+D99 N489 N490 DMOD  ; diode
+R100 N528 N348 1k  ; resistor
+Q101 N103 N147 N175 QMODN  ; npn
+R102 N490 N348 1k  ; resistor
+S104 N346 N347 0 0 SMOD  ; switch
+R105 N384 N487 1k  ; resistor
+L108 N261 N75 10u Rser=10m  ; inductor
+C113 0 0 1u  ; capacitor
+L114a N94 N103 10u Rser=10m
+L114b N149 N149 10u Rser=10m
+K114 L114a L114b 1
+L115a N101 FLT_212 10u Rser=10m
+L115b N149 N149 10u Rser=10m
+K115 L115a L115b 1
+C116 0 0 1u  ; capacitor
+R117 N107 0 1k  ; antenna as-load
+L122a N94 N103 10u Rser=10m
+L122b N210 N217 10u Rser=10m
+K122 L122a L122b 1
+D123 N210 N210 DMOD  ; diode
+C124 N175 N250 1u  ; capacitor
+D125 N103 N175 DMOD  ; diode
+L126 N217 0 10u Rser=10m  ; inductor
+D129 0 0 DMOD  ; diode.light_emitting
+C130 0 0 1u  ; capacitor
+R131 N422 N470 1k  ; resistor
+C132 N273 N113 1u  ; capacitor
+R136 0 0 1k  ; resistor
+C142 0 0 1u  ; capacitor.polarized
+V143 0 0 DC 5  ; voltage.dc
+C144 0 0 1u  ; capacitor
+L148 0 N94 10u Rser=10m  ; inductor
+R149 N314 N325 1k  ; resistor
+D152 0 0 DMOD  ; diode
+D154 0 N348 DMOD  ; diode
+D155 N487 N488 DMOD  ; diode
+C159 N94 N127 1u  ; capacitor
+R160 N431 N423 1k  ; resistor
+L162 0 0 10u Rser=10m  ; inductor
+D165 N73 N75 DMOD  ; diode
+R166 N210 0 1k  ; resistor
+X167 N147 0 N489 N487 N495 N490 0 0 0 0 N348 N348 N348 ICSTUB  ; integrated_circuit pins=L0,L1,L10,L8,L9,R11,R12,R2,R3,R4,R5,R6,R7 (structural)
+* --- models ---
+.model DMOD D
+.model QMODN NPN
+.model QMODP PNP
+.model MMODN NMOS
+.model MMODP PMOS
+.model SMOD SW()
+.subckt ICSTUB N147 0 N489 N487 N495 N490 0 0 0 0 N348 N348 N348
+* unmodeled KA7500-class footprint: pins float, OP only
+.ends ICSTUB
+.op
+.end

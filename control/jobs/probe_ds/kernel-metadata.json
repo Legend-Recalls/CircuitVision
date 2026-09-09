@@ -1,0 +1,11 @@
+{
+  "id": "muzaafnameerfirdausi/cv-probe-ds",
+  "title": "cv-probe-ds",
+  "code_file": "probe_ds.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": ["muzaafnameerfirdausi/circuitvision-focused69"]
+}

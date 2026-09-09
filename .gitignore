@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.raw
+*.log
+*.net
+.opencode/
+.venv/
+# training bulk: pixels live on versioned Kaggle datasets (see datasets/),
+# scripts + yaml + docs stay
+datasets/**/images/
+datasets/**/*.zip
+# intermediate checkpoints: keep best*.pt only (~21 MB each, needed to run)
+control/runs/**/*.pt
+!control/runs/**/best*.pt

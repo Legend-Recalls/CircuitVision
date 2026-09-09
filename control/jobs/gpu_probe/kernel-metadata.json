@@ -1,0 +1,12 @@
+{
+  "id": "muzaafnameerfirdausi/cv-gpu-probe",
+  "title": "cv-gpu-probe",
+  "code_file": "probe.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "enable_internet": false,
+  "dataset_sources": []
+}
