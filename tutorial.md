@@ -18,8 +18,6 @@
 9. [Lesson 9 — Motifs (`motifs.py`)](#lesson-9--motifs-motifspy)
 10. [Lesson 10 — Correction (`correct.py`)](#lesson-10--correction-correctpy)
 11. [Lesson 11 — Netlist and Simulation (`netlist.py` + `asc_gen.py`)](#lesson-11--netlist-and-simulation-netlistpy--asc_genpy)
-12. [Interview Bank — simple answers](#interview-bank--simple-answers-memorize-these)
-13. [Interview Cheat Sheet](#interview-cheat-sheet)
 
 **Jargon buster (the only hard words in this doc):**
 - *box* = rectangle around one part. *pin* = exact dot where wire touches box. *net* = all copper at the same voltage (one color in the pictures).
